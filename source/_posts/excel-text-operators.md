@@ -8,9 +8,15 @@ categories:
 date: 2019-12-18 12:45:35
 ---
 
+<!--在此处插入头图-->
+{%asset_img header.png "Cover"%}
+
+<!--在此处插入概述-->
 在日常工作中，经常会会遇到在excel中处理文本的情况。熟悉文本操作函数可以使工作事半功倍。特此将其中常用的整理如下，以备日常参考。
 
 <!--more-->
+
+<!--以下为正文-->
 
 ## 本文语法
 - **`函数(必要参数，[可选参数])`**: 函数的意义 : `输入示例` -> `输出` (必要注释)
@@ -60,9 +66,24 @@ date: 2019-12-18 12:45:35
 - **`DOLLARFR(number,frac)`**: 将`number`转化为分母为`frac`的金额数字: `DOLLARFR(1.125,16)` -> `1.02` (即一又十六分之二)
 - **`DOLLARDE(number,frac)`**: `DOLLARFR`的逆运算: `DOLLARFR(1.02,16)` -> `1.125` 
 
-## 参考资料
-- MS excel
-- [MS excel帮助](https://support.office.com/zh-cn/article/dollarfr-%e5%87%bd%e6%95%b0-0835d163-3023-4a33-9824-3042c5d4f495?NS=EXCEL&Version=90&SysLcid=2052&UiLcid=2052&AppVer=ZXL900&HelpId=xlmain11.chm60492&ui=zh-CN&rs=zh-CN&ad=CN)
+## 应用题
+- 问：找出将下列对账单明细中的外币数字：
+    - `A1` = `Hands Chopped at LLC GROUP Spent Amount: 114,514 JAPANESE YEN`
+    - `A2` = `114514`
+    
+- 答： 
+    - `A2` =`SUBSTITUTE(MID(A1,FIND(":",A1)+1,LEN(A1)-FIND("JAPANESE YEN",A1)-2),",","") `
+    - 思路：
+    ```excel
+    A2 = FIND(":",A1) = 39
+    A3 = FIND("JAPANESE YEN",A1) = 49
+    A4 = LEN(A1) = 60
+    A5 = MID(A1,A2+1,A4-A3-2) = 114,514
+    A6 = SUBSTITUTE(A5,",","")=114514  
+    ```
 
-## 留言
-请移步[讨论版](https://discussion.ochiba.io)
+## P.S
+- 配图是excel 95的彩蛋"Hall of Tortured Souls"，有兴趣可以移步敖厂长视频 [【敖厂长】EXCEL暗藏恐怖游戏](https://www.bilibili.com/video/av3446850)
+
+## 参考资料
+- [MS excel帮助](https://support.office.com/zh-cn/article/dollarfr-%e5%87%bd%e6%95%b0-0835d163-3023-4a33-9824-3042c5d4f495?NS=EXCEL&Version=90&SysLcid=2052&UiLcid=2052&AppVer=ZXL900&HelpId=xlmain11.chm60492&ui=zh-CN&rs=zh-CN&ad=CN)
