@@ -354,6 +354,7 @@
 ### Some other life quality improvements
 - Install `yay`, the AUR automation tool
 - Install `tlp` when using a laptop
+
 ## Reference:
 - [Installation Guide](https://wiki.archlinux.org/index.php/installation_guide)
 - [给 GNU/Linux 萌新的 Arch Linux 安装指南 rev.B](https://blog.yoitsu.moe/arch-linux/installing_arch_linux_for_complete_newbies.html)
