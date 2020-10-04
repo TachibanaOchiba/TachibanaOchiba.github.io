@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://blog.ochiba.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="（ry">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQLZoo游玩记录">
+<meta property="og:url" content="http:&#x2F;&#x2F;blog.ochiba.io&#x2F;2020&#x2F;05&#x2F;05&#x2F;SQLZoo-Note&#x2F;index.html">
+<meta property="og:site_name" content="Tsukigasaki">
+<meta property="og:description" content="（ry">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-04T16:15:56.000Z">
+<meta property="article:modified_time" content="2020-10-04T16:17:48.511Z">
+<meta property="article:author" content="Tachibana Ochiba">
+<meta property="article:tag" content="sql">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://blog.ochiba.io/2020/05/05/SQLZoo-Note/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>SQLZoo游玩记录 | Tsukigasaki</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tsukigasaki</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">The only easy day was yesterday.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>日程表</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.ochiba.io/2020/05/05/SQLZoo-Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/global_resources/avatar.jpg">
+      <meta itemprop="name" content="Tachibana Ochiba">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tsukigasaki">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SQLZoo游玩记录
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-05 00:15:56" itemprop="dateCreated datePublished" datetime="2020-05-05T00:15:56+08:00">2020-05-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-05 00:17:48" itemprop="dateModified" datetime="2020-10-05T00:17:48+08:00">2020-10-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AE%85%E7%9A%84%E6%97%A5%E5%B8%B8/" itemprop="url" rel="index">
+                    <span itemprop="name">技术宅的日常</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <!--在此处插入概述-->
+
+<p>（ry</p>
+<a id="more"></a>
+
+<!--以下为正文-->
+
+<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><h3 id="在某范围中匹配"><a href="#在某范围中匹配" class="headerlink" title="在某范围中匹配"></a>在某范围中匹配</h3><ul>
+<li><code>IN(a,b,c)</code><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> persons <span class="keyword">from</span> employee <span class="keyword">WHERE</span> lastname <span class="keyword">IN</span> (<span class="string">'Tachibana'</span>,<span class="string">'橘'</span>);</span><br></pre></td></tr></table></figure></li>
+<li><code>BETWEEN a AND b</code><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> persons <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> commencement <span class="keyword">BETWEEN</span> <span class="number">2011</span> <span class="keyword">AND</span> <span class="number">2020</span>; <span class="comment"># 含本数</span></span><br></pre></td></tr></table></figure>
+<h3 id="计算顺序"><a href="#计算顺序" class="headerlink" title="计算顺序"></a>计算顺序</h3></li>
+<li><code>()</code> &gt; <code>AND</code> &gt; <code>OR</code><ul>
+<li>Example: show the name of all players who scored a goal against Germany.<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> player</span><br><span class="line"><span class="keyword">FROM</span> goal <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> game <span class="keyword">ON</span> goal.matchid = game.id</span><br><span class="line"><span class="keyword">WHERE</span> (team1 = <span class="string">'GER'</span> <span class="keyword">OR</span> team2 = <span class="string">'GER'</span>) <span class="keyword">AND</span> teamid != <span class="string">'GER'</span> <span class="comment"># NOT:  WHERE team1 = 'GER' OR team2 = 'GER' AND teamid != 'GER'</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><code>CASE</code><ul>
+<li>Syntax: <code>CASE WHEN CondA THEN a WHEN [B] THEN b ELSE c END</code></li>
+<li>Example: List every match with the goals scored by each team  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> mdate,team1,</span><br><span class="line">    <span class="keyword">SUM</span>(<span class="keyword">CASE</span></span><br><span class="line">        <span class="keyword">WHEN</span> teamid = team1 <span class="keyword">THEN</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">ELSE</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">END</span>) <span class="keyword">AS</span> score1,</span><br><span class="line">    team2,</span><br><span class="line">    <span class="keyword">SUM</span>(<span class="keyword">CASE</span></span><br><span class="line">        <span class="keyword">WHEN</span> teamid = team2 <span class="keyword">THEN</span> <span class="number">1</span> <span class="keyword">ELSE</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">END</span>) <span class="keyword">AS</span> score2</span><br><span class="line"><span class="keyword">FROM</span> game <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> goal <span class="keyword">ON</span> game.id = goal.matchid</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">id</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> mdate,matchid,team1,team2</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><code>COALESCE(*args)</code><ul>
+<li>Show teacher name and mobile number or ‘07986 444 2266’  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,<span class="keyword">COALESCE</span>(mobile,<span class="string">'07986 444 2266'</span>) <span class="keyword">FROM</span> teacher;</span><br></pre></td></tr></table></figure>
+<h3 id="模糊匹配："><a href="#模糊匹配：" class="headerlink" title="模糊匹配："></a>模糊匹配：</h3></li>
+</ul>
+</li>
+<li>简单模式可以使用<code>LIKE</code>匹配,复杂匹配可以使用<code>REGEXP</code>用正则表达式匹配。<h4 id="LIKE"><a href="#LIKE" class="headerlink" title="LIKE"></a>LIKE</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>* <span class="keyword">FROM</span> nobel <span class="keyword">WHERE</span> winner <span class="keyword">LIKE</span> <span class="string">'C%'</span> <span class="keyword">AND</span>　winner <span class="keyword">LIKE</span> <span class="string">`%n';</span></span><br></pre></td></tr></table></figure>
+<h4 id="正则表达式-REGular-EXPressions"><a href="#正则表达式-REGular-EXPressions" class="headerlink" title="正则表达式 (REGular EXPressions)"></a>正则表达式 (REGular EXPressions)</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> nobel <span class="keyword">WHERE</span> winner REGEXP <span class="string">'^Cn$'</span>;</span><br></pre></td></tr></table></figure>
+<h5 id="简单易懂的正则表达式使用方法"><a href="#简单易懂的正则表达式使用方法" class="headerlink" title="简单易懂的正则表达式使用方法"></a>简单易懂的正则表达式使用方法</h5></li>
+</ul>
+<h6 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h6><ul>
+<li><code>\d</code>: 数字</li>
+<li><code>^[A-Za-z]</code>:字母</li>
+<li><code>[\u4e00-\u9fa5]</code>：汉字</li>
+<li><code>\s</code>：单个空字符。常见：换行符<code>\n</code>, 回车<code>\t</code>， Tab<code>\t</code><h6 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h6></li>
+<li><code>^p</code>: 以p开头</li>
+<li><code>p$</code>: 以p结尾</li>
+<li><code>[abcde]</code>： abcde中任意一个</li>
+<li><code>a|b</code>： a或者b</li>
+<li><code>f*</code>:匹配<code>f</code>零次或多次</li>
+<li><code>f+</code>:匹配<code>f</code>一次或多次</li>
+<li><code>f{n,m}</code>: 匹<code>f</code> n次至m次。m可以留空，表示匹配n次。</li>
+<li><code>()</code>: 计算顺序。例如<code>(o|oc)hiba</code>匹配<code>ochiba</code>或者<code>chiba</code>.</li>
+</ul>
+<h3 id="套娃"><a href="#套娃" class="headerlink" title="套娃"></a>套娃</h3><h4 id="嵌套子查询-Nested-subqueries"><a href="#嵌套子查询-Nested-subqueries" class="headerlink" title="嵌套子查询 (Nested subqueries)"></a>嵌套子查询 (Nested subqueries)</h4><ul>
+<li>一条语句的一部分是另一条语句（套娃）<ul>
+<li>例子：Show the years when a Medicine award was given but no Peace or Literature award was<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> yr</span><br><span class="line"><span class="keyword">FROM</span> nobel</span><br><span class="line"><span class="keyword">WHERE</span> </span><br><span class="line">    subject = <span class="string">'Medicine'</span> </span><br><span class="line">    <span class="keyword">AND</span> yr <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">Select</span> <span class="keyword">year</span> <span class="keyword">FROM</span> nobel <span class="keyword">WHERE</span> subject = <span class="string">'Literature'</span>)</span><br><span class="line">    <span class="keyword">AND</span> yr <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">Select</span> <span class="keyword">year</span> <span class="keyword">FROM</span> nobel <span class="keyword">WHERE</span> subject = <span class="string">'Peace'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="相关子查询-Correlated-subqueries"><a href="#相关子查询-Correlated-subqueries" class="headerlink" title="相关子查询(Correlated subqueries)"></a>相关子查询(Correlated subqueries)</h4></li>
+</ul>
+</li>
+<li>子查询根据母查询的需求运行多次<ul>
+<li>例子：Find the largest country (by area) in each continent, show the continent, the name and the area:<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> continent, <span class="keyword">name</span>, area</span><br><span class="line"><span class="keyword">FROM</span> world x</span><br><span class="line"><span class="keyword">WHERE</span> area &gt;= <span class="keyword">ALL</span></span><br><span class="line">(<span class="keyword">SELECT</span> area <span class="keyword">FROM</span> world y <span class="keyword">WHERE</span> x.continent = y. continent)</span><br></pre></td></tr></table></figure>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><h4 id="设定列名：AS"><a href="#设定列名：AS" class="headerlink" title="设定列名：AS"></a>设定列名：<code>AS</code></h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,<span class="keyword">max</span>(grade) <span class="keyword">AS</span> best, <span class="keyword">min</span>(grade) <span class="keyword">AS</span> worst</span><br><span class="line"><span class="keyword">FROM</span> students</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">by</span> <span class="keyword">name</span></span><br><span class="line"><span class="keyword">HAVING</span> <span class="keyword">min</span>(grade) &gt; <span class="number">80</span></span><br></pre></td></tr></table></figure>
+<h4 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h4></li>
+</ul>
+</li>
+<li>舍去小数点：<code>ROUND</code><h4 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h4></li>
+<li>连接字符：<code>CONCAT</code><ul>
+<li>例子：Show the name and the population of each country in Europe. Show the population as a percentage of the population of Germany.<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, <span class="keyword">CONCAT</span>(<span class="keyword">ROUND</span>(population * <span class="number">100</span>/ (<span class="keyword">SELECT</span> population <span class="keyword">FROM</span> world <span class="keyword">WHERE</span> <span class="keyword">name</span> = <span class="string">'Germany'</span>)),<span class="string">'%'</span>) <span class="keyword">AS</span> percentage</span><br><span class="line"><span class="keyword">FROM</span> world </span><br><span class="line"><span class="keyword">WHERE</span> continent = <span class="string">'Europe'</span></span><br></pre></td></tr></table></figure>
+<h4 id="排序-ORDER-BY"><a href="#排序-ORDER-BY" class="headerlink" title="排序 ORDER BY"></a>排序 <code>ORDER BY</code></h4></li>
+</ul>
+</li>
+<li><code>DESC</code>: 降序； <code>ASC</code>:升序  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ename, salary <span class="keyword">FROM</span> employee <span class="keyword">ORDER</span> <span class="keyword">BY</span> ename <span class="keyword">ASC</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/sql/" rel="tag"># sql</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/18/excel-text-operators/" rel="prev" title="MS excel 常用的文本操作函数">
+      <i class="fa fa-chevron-left"></i> MS excel 常用的文本操作函数
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/10/Ochiba's%20Arch%20Linux%20Recipe/" rel="next" title="Ochiba's Arch Linux Recipe">
+      Ochiba's Arch Linux Recipe <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查询"><span class="nav-number">1.</span> <span class="nav-text">查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在某范围中匹配"><span class="nav-number">1.1.</span> <span class="nav-text">在某范围中匹配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算顺序"><span class="nav-number">1.2.</span> <span class="nav-text">计算顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模糊匹配："><span class="nav-number">1.3.</span> <span class="nav-text">模糊匹配：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#LIKE"><span class="nav-number">1.3.1.</span> <span class="nav-text">LIKE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则表达式-REGular-EXPressions"><span class="nav-number">1.3.2.</span> <span class="nav-text">正则表达式 (REGular EXPressions)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#简单易懂的正则表达式使用方法"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">简单易懂的正则表达式使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#字符"><span class="nav-number">1.3.2.1.1.</span> <span class="nav-text">字符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#语法"><span class="nav-number">1.3.2.1.2.</span> <span class="nav-text">语法</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#套娃"><span class="nav-number">1.4.</span> <span class="nav-text">套娃</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#嵌套子查询-Nested-subqueries"><span class="nav-number">1.4.1.</span> <span class="nav-text">嵌套子查询 (Nested subqueries)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关子查询-Correlated-subqueries"><span class="nav-number">1.4.2.</span> <span class="nav-text">相关子查询(Correlated subqueries)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出格式"><span class="nav-number">1.5.</span> <span class="nav-text">输出格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设定列名：AS"><span class="nav-number">1.5.1.</span> <span class="nav-text">设定列名：AS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数值"><span class="nav-number">1.5.2.</span> <span class="nav-text">数值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文本"><span class="nav-number">1.5.3.</span> <span class="nav-text">文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序-ORDER-BY"><span class="nav-number">1.5.4.</span> <span class="nav-text">排序 ORDER BY</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tachibana Ochiba"
+      src="/global_resources/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Tachibana Ochiba</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:contact@ochiba.io" title="E-Mail → mailto:contact@ochiba.io" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/TachibanaOchiba" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;TachibanaOchiba" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>Telegram</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tachibana Ochiba</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
