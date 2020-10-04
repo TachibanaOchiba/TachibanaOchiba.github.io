@@ -1,16 +1,23 @@
 ---
 title: 陈晓平《逻辑学》读书笔记
-date: 2020-10-05 00:)0:00
 tags:
-- 读书笔记
-categories:
 - 逻辑学
+categories:
+- 读书笔记
+date: 2020-10-05 00:15:56
 ---
 
+<!--在此处插入头图-->
 
-# 
-## Preface
-a
+{%asset_img header.jpg "Cover"%}
+
+<!--在此处插入概述-->
+
+Executive Summary
+
+<!--more-->
+
+<!--以下为正文-->
 
 ## 逻辑学的基本概念
 

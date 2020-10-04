@@ -1,15 +1,22 @@
 ---
-title: Ochiba's Arch Linux Recipe
-date: 2020-09-10 00:00:00
+title: Ochiba's Archlinux Recipe
 tags:
-- 技术宅的日常
+  - archlinux
 categories:
-- linux
-- archlinux
+  - 技术宅的日常
+date: 2020-09-05 00:30:32
 ---
 
-# 
+<!--在此处插入头图-->
 
+{%asset_img header.jpg "Cover"%}
+
+<!--在此处插入概述-->
+随着Windows对用户隐私的不断侵犯，如果需要一个安全隐私的计算平台，linux是不二之选。其中，Archlinux虽然安装复杂，但是其包管理器pacman和用户仓库yay内容十分丰富，使日常使用非常顺畅。本文记录了我自己安装archlinux的过程。
+
+<!--more-->
+
+<!--以下为正文-->
 
 ## Preface
 - This is a record of the process of installing Arch Linux on a typical computer with `UEFI` support. If your computer don't support `UEFI`, the making partition part might be different.
