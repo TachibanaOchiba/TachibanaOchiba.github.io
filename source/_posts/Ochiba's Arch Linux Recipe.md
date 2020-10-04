@@ -1,4 +1,14 @@
-# Ochiba's Arch Linux Recipe
+---
+title: Ochiba's Arch Linux Recipe
+date: 2020-09-10 00:00:00
+tags:
+- 技术宅的日常
+categories:
+- linux
+- archlinux
+---
+
+# 
 
 
 ## Preface
