@@ -5,7 +5,7 @@ tags:
 - git
 - Hexo
 categories:
-- 电脑杂谈
+- 技术宅的日常
 ---
 
 <!--在此处插入头图-->
@@ -13,7 +13,8 @@ categories:
 
 <!--在此处插入概述-->
 
-本文记录了搭建这个站点的过程。
+- 本文记录了搭建这个站点的过程。
+- 2020/10/5: 追加如何更新站点
 
 <!--more-->
 
@@ -196,5 +197,16 @@ categories:
   - `npx npm install hexo-deployer-git`
   - `npx npm install`
 
-## 留言
-请移步[讨论版](https://discussion.ochiba.io)
+#### 更新
+> 定期检查更新，以便保持站点的安全性。
+- 检查更新
+    - `npm install -g npm-check` 
+    - `npm-check`
+- 执行更新
+    - `npm install -g npm-upgrade`
+    - `npm-upgrade`
+- 在其他终端fetch之后，记得
+    - `npm install`
+
+## References
+- [Hexo博客及环境依赖包的正确升级方法](https://hexo.imydl.tech/archives/51612.html)
