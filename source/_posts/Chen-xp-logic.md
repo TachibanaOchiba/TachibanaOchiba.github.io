@@ -77,4 +77,4 @@ Executive Summary
 
 ## 参考资料
 - [【逻辑学】陈晓平 教授 - Bilibili](https://www.bilibili.com/video/BV1Gs411b7k6)
-- [《自然演绎逻辑导论》-陈晓平](r2.pdf)
+- [《自然演绎逻辑导论》-陈晓平](自然演绎逻辑导论-陈晓平.pdf)
