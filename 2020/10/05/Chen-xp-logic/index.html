@@ -55,7 +55,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;blog.ochiba.io&#x2F;2020&#x2F;10&#x2F;05&#x2F;Chen-xp-logic&#x2F;header.jpg">
 <meta property="article:published_time" content="2020-10-04T16:15:56.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:47:26.616Z">
+<meta property="article:modified_time" content="2020-10-08T04:38:39.285Z">
 <meta property="article:author" content="Tachibana Ochiba">
 <meta property="article:tag" content="逻辑学">
 <meta name="twitter:card" content="summary">
@@ -215,10 +215,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-10-05 00:15:56 / 修改时间：00:47:26" itemprop="dateCreated datePublished" datetime="2020-10-05T00:15:56+08:00">2020-10-05</time>
+              <time title="创建时间：2020-10-05 00:15:56" itemprop="dateCreated datePublished" datetime="2020-10-05T00:15:56+08:00">2020-10-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-08 12:38:39" itemprop="dateModified" datetime="2020-10-08T12:38:39+08:00">2020-10-08</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -258,10 +264,8 @@
 <li><code>推论</code>由<code>命题</code>组成，命题由<code>词项</code>组成。<ul>
 <li><code>推论</code>是由有推出关系的句群；</li>
 <li><code>命题</code>是具有真假性质的语句；</li>
-<li><code>词项</code>是表达概念的语词。<h4 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h4></li>
-</ul>
-</li>
-<li>我说错了或者你听错了。我没说错，所以你听错了。<ul>
+<li><code>词项</code>是表达概念的语词。<h4 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h4><ul>
+<li>我说错了或者你听错了。我没说错，所以你听错了。</li>
 <li>推论：我说错了或者你听错了。我没说错，所以你听错了。<ul>
 <li>命题：<ul>
 <li>我说错了或者你听错了</li>
@@ -274,6 +278,8 @@
 <li>说错</li>
 <li>你</li>
 <li>听错</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -306,11 +312,25 @@
 </ul>
 </li>
 </ul>
-<h2 id="有效推论和可靠推论"><a href="#有效推论和可靠推论" class="headerlink" title="有效推论和可靠推论"></a>有效推论和可靠推论</h2><ul>
+<h3 id="有效推论和可靠推论"><a href="#有效推论和可靠推论" class="headerlink" title="有效推论和可靠推论"></a>有效推论和可靠推论</h3><ul>
 <li>有效推论：如果前提为真，结论一定为真的推论。推论的有效性与形式有关，与本身正确与否无关。</li>
-<li>可靠推论：结论为真的推论。</li>
+<li>可靠推论：前提为为真的有效推论。</li>
 <li>替换例子：变换一个推论形式中的变项得到的其他推论。</li>
-<li>有效推论是有效替换</li>
+</ul>
+<h2 id="如何判断推论是否符合逻辑？"><a href="#如何判断推论是否符合逻辑？" class="headerlink" title="如何判断推论是否符合逻辑？"></a>如何判断推论是否符合逻辑？</h2><blockquote>
+<p>主要过程：确定推论形式的有效性 -&gt; 确定前提的正确性。推论形式的无效可以用反证法，有效需要用（）。</p>
+</blockquote>
+<ul>
+<li>例1： 有知识分子不是教师，有科学家是知识分子，所以有科学家不是教师。<ul>
+<li>抽取推论形式。 有p不是q AND 有s是p –&gt; 有s不是q。</li>
+<li>推论形式有效吗？反证法：有被2整除的数字不能被3整除，有能被6整除的数字能被3整除 –&gt; 有能被6整除的数字不能被2整除 （X）–&gt; 推论形式无效。</li>
+<li>所以<b>推论是错误的</b>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.bilibili.com/video/BV1Gs411b7k6" target="_blank" rel="noopener">【逻辑学】陈晓平 教授 - Bilibili</a></li>
+<li><a href="r2.pdf">《自然演绎逻辑导论》-陈晓平</a></li>
 </ul>
 
     </div>
@@ -393,7 +413,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑学的基本概念"><span class="nav-number">1.</span> <span class="nav-text">逻辑学的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推论、命题、词项"><span class="nav-number">1.1.</span> <span class="nav-text">推论、命题、词项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#举例："><span class="nav-number">1.1.1.</span> <span class="nav-text">举例：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归纳推论和演绎推论"><span class="nav-number">1.2.</span> <span class="nav-text">归纳推论和演绎推论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#举例：-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">举例：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论形式"><span class="nav-number">1.3.</span> <span class="nav-text">推论形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常项、变项、变域"><span class="nav-number">1.4.</span> <span class="nav-text">常项、变项、变域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有效推论和可靠推论"><span class="nav-number">2.</span> <span class="nav-text">有效推论和可靠推论</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑学的基本概念"><span class="nav-number">1.</span> <span class="nav-text">逻辑学的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推论、命题、词项"><span class="nav-number">1.1.</span> <span class="nav-text">推论、命题、词项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#举例："><span class="nav-number">1.1.1.</span> <span class="nav-text">举例：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归纳推论和演绎推论"><span class="nav-number">1.2.</span> <span class="nav-text">归纳推论和演绎推论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#举例：-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">举例：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论形式"><span class="nav-number">1.3.</span> <span class="nav-text">推论形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常项、变项、变域"><span class="nav-number">1.4.</span> <span class="nav-text">常项、变项、变域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有效推论和可靠推论"><span class="nav-number">1.5.</span> <span class="nav-text">有效推论和可靠推论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何判断推论是否符合逻辑？"><span class="nav-number">2.</span> <span class="nav-text">如何判断推论是否符合逻辑？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -409,7 +429,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -422,7 +442,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
